@@ -285,9 +285,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraScript.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\WinGame.cs" />
+    <Compile Include="Assets\_Scripts\CameraScript.cs" />
+    <Compile Include="Assets\_Scripts\Death.cs" />
+    <Compile Include="Assets\_Scripts\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\WinGame.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 
 
     static bool youWin;
+    static bool dead;
     private Rigidbody rb;
 
     // Text game object can be added in inspector because of [SerializeField] line
@@ -24,11 +25,11 @@ public class PlayerController : MonoBehaviour {
     void Start()
     {
 
+        youWin = false;
+        dead = false;
+
         // Turn WinText off at the start
         winText.gameObject.SetActive(false);
-
-        // You don't win at the start
-        youWin = false;
 
         // Getting Rigidbody2D component of the ball game object
         rb = GetComponent<Rigidbody>();
@@ -39,8 +40,6 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
 
-
-
         // If you win
         if (youWin)
         {
@@ -49,7 +48,12 @@ public class PlayerController : MonoBehaviour {
             winText.gameObject.SetActive(true);
 
             // Restart scene to play again in 2 seconds
-            Invoke("RestartScene", 2f);
+            Invoke("NextScene", 2f);
+        }
+
+        if (dead)
+        {
+            Invoke("RestartScene", 1f);
         }
 
     }
@@ -81,9 +85,21 @@ public class PlayerController : MonoBehaviour {
         youWin = true;
     }
 
+    public static void setDeadToTrue()
+    {
+        dead = true;
+    }
+
     // Method to restart current scene
     void RestartScene()
     {
-        SceneManager.LoadScene("Scene01");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    //Method to load next scene
+    void NextScene()
+    {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
