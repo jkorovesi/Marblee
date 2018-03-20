@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour {
     void Update()
     {
 
+
+
         // If you win
         if (youWin)
         {
@@ -69,7 +71,7 @@ public class PlayerController : MonoBehaviour {
 
         //rb.AddForce(tilt);
         //Debug.DrawRay(transform.position + Vector3.up, tilt, Color.red);
-
+        transform.localScale = transform.localScale;
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -99,7 +101,10 @@ public class PlayerController : MonoBehaviour {
     //Method to load next scene
     void NextScene()
     {
-
+        if (SceneManager.GetActiveScene().name == "LevelTest")
+        {
+            SceneManager.LoadScene("MainMenu");
+        } else
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

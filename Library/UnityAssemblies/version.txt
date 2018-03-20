@@ -1,4 +1,4 @@
-2017.3.0f3:3.1.0.0
+2017.3.1f1:3.1.0.0
 StandaloneWindows64
 C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll
 C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll
@@ -69,6 +69,7 @@ C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Ru
 C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
 C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll
 C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
 C:/Users/Joshua/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll
@@ -78,3 +79,5 @@ C:/Users/Joshua/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.uni
 C:/Users/Joshua/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll
 C:/Users/Joshua/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll
 C:/Users/Joshua/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll
+C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll
+C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll
