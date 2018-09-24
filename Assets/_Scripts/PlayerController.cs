@@ -13,49 +13,33 @@ public class PlayerController : MonoBehaviour {
     float dirX, dirY, dirZ;
 
 
-    static bool youWin;
     static bool dead;
     private Rigidbody rb;
 
-    // Text game object can be added in inspector because of [SerializeField] line
-    [SerializeField]
-    GameObject winText;
+
+    private void Awake()
+    {
+        dead = false;
+
+    }
 
     // Use this for initialization
     void Start()
     {
-
-        youWin = false;
-        dead = false;
-
-        // Turn WinText off at the start
-        winText.gameObject.SetActive(false);
-
         // Getting Rigidbody2D component of the ball game object
         rb = GetComponent<Rigidbody>();
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
-
-        // If you win
-        if (youWin)
-        {
-
-            // then turn YouWin sign on
-            winText.gameObject.SetActive(true);
-
-            // Restart scene to play again in 2 seconds
-            Invoke("NextScene", 2f);
-        }
-
         if (dead)
         {
+
             Invoke("RestartScene", 1f);
+            
         }
 
     }
@@ -79,13 +63,9 @@ public class PlayerController : MonoBehaviour {
 
         rb.AddForce(movement * speed);
 
+
     }
 
-    // Method is inviked by exit hole game object when ball thouches its collider
-    public static void setYouWinToTrue()
-    {
-        youWin = true;
-    }
 
     public static void setDeadToTrue()
     {
@@ -95,16 +75,9 @@ public class PlayerController : MonoBehaviour {
     // Method to restart current scene
     void RestartScene()
     {
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       
     }
 
-    //Method to load next scene
-    void NextScene()
-    {
-        if (SceneManager.GetActiveScene().name == "LevelTest")
-        {
-            SceneManager.LoadScene("MainMenu");
-        } else
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class QuitOnClick : MonoBehaviour {
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void Quit()
     {
 #if UNITY_EDITOR
